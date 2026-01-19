@@ -50,15 +50,11 @@ Consumo do endpoint público /list.json
 
 Validação do status HTTP (200)
 
-Verificação da estrutura da resposta (nome, preço)
-
-Confirmação de produtos específicos (ex: Mocha)
-
-Comparação API x UI (produto da API aparece na tela)
+Confirmação de produtos 
 
 Evidências dos Testes
 
-Todos os testes são gravados em vídeo, capturando o fluxo completo de execução.
+Os testes são gravados em vídeo, capturando o fluxo completo de execução.
 
 Os vídeos permitem ver:
 
