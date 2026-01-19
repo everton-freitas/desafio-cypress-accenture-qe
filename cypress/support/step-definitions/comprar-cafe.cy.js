@@ -12,7 +12,11 @@ Given('que o usuário acessa o site "https://coffee-cart.app"', () => {
 
 When('o usuário seleciona 3 tipos de cafés diferentes', () => {
 
-    CoffeePage.selecionarCafes('ESPRESSO', 'CAPPUCCINO', 'AMERICANO')
+  const cafes = ['ESPRESSO', 'CAPPUCCINO', 'AMERICANO']
+
+  Cypress.env('cafesSelecionados', cafes)
+
+  CoffeePage.selecionarCafes(...cafes)
 
 })
 
@@ -29,11 +33,13 @@ And('o usuário aceita a oferta de "Mocha" por $4', () => {
 })
 
 Then('o carrinho deve conter 4 itens com os valores corretos', () => {
+
+  const cafesSelecionados = Cypress.env('cafesSelecionados')
   
   CartPage.abrirCarrinho()
   CartPage.validarPagina()
   CartPage.validarQuantidadeItens(4)
-  // CartPage.validarValores(cafesSelecionados)
+  CartPage.validarValores('MOCHA_DISCOUNTED', ...cafesSelecionados)
 
 })
 
