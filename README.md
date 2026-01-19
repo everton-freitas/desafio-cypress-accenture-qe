@@ -78,6 +78,8 @@ npm ou yarn
 Instalação
 git clone https://github.com/everton-freitas/desafio-cypress-accenture-qe
 
+cd desafio-cypress-accenture-qe
+
 npm install
 
 Rodar UI + E2E (Cypress Open)
